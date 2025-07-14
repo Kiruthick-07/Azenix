@@ -267,6 +267,9 @@ window.addEventListener('load', () => {
         }, 400);
     }
 });
+function ddalert(){
+    alert("This is an personal project of our client , which is not availabe to display right now. Soon we will update it!")
+}
 
 // Add CSS class for active nav link
 const style = document.createElement('style');
