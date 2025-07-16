@@ -4,11 +4,36 @@ const navToggle = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 const scrollToTopBtn = document.getElementById('scrollToTop');
 const contactForm = document.getElementById('contactForm');
+const nav = document.querySelector(".side-navbar");
+
+
+function opennav(){
+    nav.style.display="block";
+}
+function closenav(){
+    nav.style.display="none";
+}
 
 // Mobile Navigation Toggle
-navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    navToggle.classList.toggle('active');
+
+
+// Side Navbar for Mobile
+// Ensure nav is selected after DOM is loaded
+
+document.addEventListener('DOMContentLoaded', function() {
+    var nav = document.querySelector('.side-navbar');
+    window.opennav = function() {
+        if (nav) nav.classList.add('open');
+    }
+    window.closenav = function() {
+        if (nav) nav.classList.remove('open');
+    }
+    // Close side-navbar when a link inside it is clicked
+    document.querySelectorAll('.side-navbar a').forEach(link => {
+        link.addEventListener('click', function() {
+            if (nav) nav.classList.remove('open');
+        });
+    });
 });
 
 // Close mobile menu when clicking on a link

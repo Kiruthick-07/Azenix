@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Azenix - Innovative Software Solutions</title>
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon"  type="image/jpg" href="/Azenix/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,7 +15,7 @@
     <nav id="navbar" class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <h2>Azenix</h2>
+                <h2><span class="logo-font">A</span> Azenix</h2>
             </div>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -22,10 +24,20 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="toggle-menu" style="margin-right: 40px;" onclick="opennav()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="side-navbar" style="background-color: rgb(100, 123, 255);">
+                <p style="text-align: right;" onclick="closenav()">
+                <i class="fa-solid fa-xmark" style="cursor: pointer;"></i>
+                </p>
+                <div class="side-nav-links" >
+                    <p class="sidenavdata"><a href="#home" class="sidenavdata">Home</a></p>
+                    <p class="sidenavdata"><a href="#services" class="sidenavdata">Services</a></p>
+                    <p class="sidenavdata"><a href="#projects" class="sidenavdata">Projects</a></p>
+                    <p class="sidenavdata"><a href="#about" class="sidenavdata">About</a></p>
+                    <p class="sidenavdata"><a href="#contact" class="sidenavdata">Contact</a></p>
+                </div>
             </div>
         </div>
     </nav>
